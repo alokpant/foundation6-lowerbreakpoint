@@ -1,0 +1,47 @@
+// colors
+$black:                     #000;
+$atlantis:                  #79d536;
+$candlelight:               #ffdf23;
+$dodger-blue:               #2dbbf9;
+
+// // media querie breakpoint
+// // from foundation
+// $small-breakpoint:  640px
+// $medium-breakpoint: 1024px
+// $large-breakpoint:  1440px
+// $xlarge-breakpoint: 1920px
+//
+// $small-lower-breakpoint:  639px
+// $medium-lower-breakpoint: 1023px
+// $large-lower-breakpoint:  1439px
+// $xlarge-lower-breakpoint: 1919px
+
+$width-of-sidebar: 230px;
+
+.main-container {
+  width: 100%;
+
+  @include breakpoint(large) {
+    float: right;
+    margin-left: -230px;
+    }
+  }
+
+.inner-container {
+  background: $dodger-blue;
+
+  @include breakpoint(large) {
+    margin-left: 230px;
+    height: 100vh;
+  }
+}
+
+.sidebar {
+  background-color: $black;
+  height: 100vh;
+  width: $width-of-sidebar;
+
+  @media screen and #{breakpoint(large down)} {
+    display: none;
+  }
+}
