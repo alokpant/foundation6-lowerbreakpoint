@@ -41,7 +41,7 @@ $width-of-sidebar: 230px;
   height: 100vh;
   width: $width-of-sidebar;
 
-  @media screen and #{breakpoint(large down)} {
+  @include breakpoint(large down) {
     display: none;
   }
 }
